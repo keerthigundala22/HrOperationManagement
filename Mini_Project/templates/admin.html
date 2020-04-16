@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+{% block admin %}
+
+
+    <table align="center" border="0"bgcolor="#7fffd4">
+       <form action="{% url 'HRadmin' %}" method="post">
+          {% csrf_token %}
+    <tr><th><h3 style="text-align: center">Admin Login Page</h3></th></tr>
+    <tr>
+        <th>{{ hr.as_p }}</th>
+    </tr>
+    <tr>
+        <th style="text-align: center"><button type="submit" value="admin" name="t1">Login</button></th>
+    </tr>
+       </form>
+    </table>{% endblock %}
+
+

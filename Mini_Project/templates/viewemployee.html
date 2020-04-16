@@ -1,0 +1,26 @@
+{% extends 'admin_menu.html' %}
+{% block adminmenu %}
+<table align="center" border="0" bgcolor="#90ee90">
+    <tr><th colspan="6"><h3 style="text-align: center;color: blue">VIEW EMPLOYEE DETAILS</h3></th></tr>
+    <tr bgcolor="#90ee90">
+        <th> IDNO</th>
+        <th> Employee Name</th>
+        <th>Designation </th>
+        <th>Address</th>
+        <th>Email-lD</th>
+        <th>contact no</th>
+    </tr>
+
+    <tr>
+        {% for x in add%}
+      <tr  bgcolor="#ffb6c1" style="text-align: center;color: white"> <th> {{ x.Idno }}</th>
+        <th> {{ x.EmployeeName }}</th>
+        <th>{{ x.Designation }}</th>
+        <th>{{ x.Address}}</th>
+           <th>{{ x.Email}}</th>
+           <th>{{ x.ContactNO}}</th>
+       </tr>
+       {% endfor %}
+    </tr>
+</table>
+{% endblock %}

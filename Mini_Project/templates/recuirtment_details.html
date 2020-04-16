@@ -1,0 +1,12 @@
+{% extends 'manager/recuirtment_home.html' %}
+{% block recuirtmenthome %}
+    <form action="{% url 'recuirtment_details' %}" method="post">
+    {% csrf_token %}
+
+    <table align="center" border="0" bgcolor="silver">
+
+        <tr><th><h2 style="text-shadow: deeppink;color: red">POSTING NEW RECUIRTMENT DETAILS</h2></th></tr>
+    <tr><th>{{ rd.as_p }}</th></tr>
+    <tr style="text-align: center"><th><button type="submit" value="recuirtment" name="t1">ADD</button></th></tr>
+    </table></form>
+{% endblock %}

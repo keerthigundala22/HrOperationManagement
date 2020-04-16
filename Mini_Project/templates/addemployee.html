@@ -1,0 +1,17 @@
+{% extends 'admin_menu.html' %}
+{% block adminmenu %}
+<table align="center" border="0" bgcolor="#f0e68c" width="500" style="height: 300px">
+    <form action="{% url 'addemployee' %}" method="post">
+    {% csrf_token %}
+
+    <tr><th><h2 style="text-align: center;color: deeppink">ADD EMPLOYEES PAGE</h2></th></tr>
+    <tr style="text-align: center;width: 150px"><th>Idno:{{ eform.Idno }}</th></tr>
+        <tr style="text-align: center;width: 50px"> <th>Employee Name:{{ eform.EmployeeName }}</th></tr>
+        <tr style="text-align:center"><th>Designation:----------{{ eform.Designation }}</th></tr>
+        <tr style="text-align: center;width: 150px"><th>Address:{{ eform.Address }}</th></tr>
+        <tr style="text-align: center;width: 150px"><th>Email-ID:{{ eform.Email }}</th></tr>
+        <tr style="text-align: center;width: 150px"><th>ContactNo:{{ eform.ContactNO }}</th></tr>
+
+    <tr style="text-align: center;width: 150px"><th><button type="submit" value="add" name="t2"> SUBMIT</button> </th></tr></form>
+</table>
+{% endblock %}

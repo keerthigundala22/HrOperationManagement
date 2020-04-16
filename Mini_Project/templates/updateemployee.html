@@ -1,0 +1,26 @@
+{% extends 'admin_menu.html' %}
+{% block adminmenu %}
+<table align="center" border="0" bgcolor=#87ceeb>
+    <tr><th colspan="6"><h3 style="text-align: center;color: deeppink">UPDATE EMPLOYEE DETAILS</h3></th></tr>
+    <tr bgcolor="#87ceeb">
+        <th>IDNO</th>
+        <th> Employee Name</th>
+        <th>Designation </th>
+        <th>Address</th>
+        <th>Email-lD</th>
+        <th>contact no</th>
+    </tr>
+
+    <tr>
+        {% for x in up%}
+            <tr  bgcolor="#ffa07a" style="text-align: center;color: white"> <th><a href="{% url 'updateemployee'%}?idno={{ x.Idno }}"> {{ x.Idno }}</a></th>
+        <th> {{ x.EmployeeName }}</th>
+        <th>{{ x.Designation }}</th>
+        <th>{{ x.Address}}</th>
+           <th>{{ x.Email}}</th>
+           <th>{{ x.ContactNO}}</th>
+       </tr>
+
+       {% endfor %}
+    </tr>
+</table>{% endblock %}

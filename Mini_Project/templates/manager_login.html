@@ -1,0 +1,16 @@
+{% extends 'common.html' %}
+{% block sample %}
+
+
+    <table align="center" border="0"bgcolor="#90ee90">
+       <form action="{% url 'manager' %}" method="post">
+          {% csrf_token %}
+    <tr><th><h3 style="text-align: center">Manager Login Page</h3></th></tr>
+    <tr>
+        <th>{{ mf.as_p }}</th>
+    </tr>
+    <tr>
+        <th style="text-align: center"><button type="submit" value="manager" name="t1">Login</button></th>
+    </tr>
+       </form>
+    </table>{% endblock %}

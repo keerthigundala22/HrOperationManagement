@@ -1,0 +1,9 @@
+{% extends 'applicant1/applicant_common.html'%}
+{% block sample_common %}
+    <form method="post" action="{% url 'applicationform' %}">
+    {% csrf_token  %}
+        <table align="center">
+    <tr><th><h1>Applicant Login Page</h1></th></tr>
+    <tr><th>{{ af.as_p }}</th></tr>
+    <tr><th><button type="submit" value="login" name="t1">Login</button></th></tr>
+</table></form>{% endblock %}

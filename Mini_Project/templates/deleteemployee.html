@@ -1,0 +1,31 @@
+{% extends 'admin_menu.html' %}
+{% block adminmenu %}<form action="{% url 'delete' %}" method="post">
+    {% csrf_token %}
+
+<table align="center" border="0" bgcolor=#87ceeb>
+    <tr><th colspan="7"><h3 style="text-align: center;color: deeppink">DELETE EMPLOYEE DETAILS</h3></th></tr>
+    <tr bgcolor="#87ceeb" style="color:white">
+        <th>ID</th>
+        <th>IDNO</th>
+        <th> Employee Name</th>
+        <th>Designation </th>
+        <th>Address</th>
+        <th>Email-lD</th>
+        <th>contact no</th>
+    </tr>
+
+    <tr>
+        {% for x in delete%}
+        <tr style="color:white;background-color:black"><th><input type="checkbox" value="{{ x.Idno }}" name="c1"></th>
+        <th> {{ x.Idno }}</th>
+        <th> {{ x.EmployeeName }}</th>
+        <th>{{ x.Designation }}</th>
+        <th>{{ x.Address}}</th>
+           <th>{{ x.Email}}</th>
+           <th>{{ x.ContactNO}}</th>
+       </tr>
+
+       {% endfor %}
+    </tr>
+    <tr><th colspan="7"><button type="submit"><h6 style="text-align: center">DELETE</h6></button></th></tr>
+</table></form>{% endblock %}
